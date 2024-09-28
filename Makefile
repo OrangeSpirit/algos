@@ -1,4 +1,4 @@
-GCC= g++
+GCC= g++ -std=c++17
 WWW= -Wall -Werror -Wextra
 CMD= echo "pip to pip"
 
@@ -27,6 +27,18 @@ string: clean
 
 pair: clean
 	$(GCC) $(WWW) pair.cpp
+	./a.out
+
+sizeof: clean
+	$(GCC) $(WWW) sizeof.cpp
+	./a.out
+
+reinterpret: clean
+	$(GCC) $(WWW) reinterpret.cpp
+	./a.out
+
+array: clean
+	$(GCC) $(WWW) array.cpp
 	./a.out
 
 retry:
