@@ -10,6 +10,10 @@ int main() {
       break;
     }
   }
-  std::cout << "flag = " << flag << std::endl;
+  if (flag) {
+    std::cout << N << " is a simple" << std::endl;
+  } else {
+    std::cout << N << " Not simple" << std::endl;
+  }
 return 0;
 }
