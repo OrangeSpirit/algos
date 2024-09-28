@@ -19,5 +19,7 @@ int main() {
   std::cout << "A.a = " << A.a << "     A.b = " << A.b << std::endl;
   pair_struct B = pair_multipul(A);
   std::cout << "B.a = " << B.a << "     B.b = " << B.b << std::endl;
+  A = B;
+  std::cout << "A.a = " << A.a << "     A.b = " << A.b << std::endl;
   return 0;
 }
