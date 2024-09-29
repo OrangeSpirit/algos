@@ -11,5 +11,7 @@ int main() {
 
   std::cout << " p + 4 = " << p + 4 << std::endl;
 
+  std::cout << " A[6] = 6[A] = " << 6[A] << std::endl;
+
   return 0;
 }
