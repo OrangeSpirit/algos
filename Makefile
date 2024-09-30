@@ -41,6 +41,18 @@ array: clean
 	$(GCC) $(WWW) array.cpp
 	./a.out
 
+resheto: clean
+	$(GCC) $(WWW) resheto.cpp
+	./a.out
+
+append: clean
+	$(GCC) $(WWW) append.cpp
+	./a.out
+
+sorted: clean
+	$(GCC) $(WWW) sorted.cpp
+	./a.out
+
 retry:
 	for i in {1..5}; do $(CMD) && break\
 	|| sleep 3; done
