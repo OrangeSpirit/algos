@@ -1,9 +1,13 @@
+CC= gcc
 GCC= g++ -std=c++17
 WWW= -Wall -Werror -Wextra
 CMD= echo "pip to pip"
 
 clean:
 	rm -rf *.out
+
+valgrind_a.out:
+	valgrind --tool=memcheck --leak-check=yes	./a.out
 
 simple_number: clean
 	$(GCC) $(WWW) simple_number.cpp
@@ -51,6 +55,10 @@ append: clean
 
 sorted: clean
 	$(GCC) $(WWW) sorted.cpp
+	./a.out
+
+malloc: clean
+	$(CC) $(WWW) malloc.cpp
 	./a.out
 
 retry:

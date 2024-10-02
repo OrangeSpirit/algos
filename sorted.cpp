@@ -1,8 +1,11 @@
 #include <iostream>
 #include <ctime>
+#include <chrono>
 
 int main() {
   clock_t start = clock();
+  auto begin = std::chrono::steady_clock::now();
+
   int N = 10000;
   int A[N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11};
   //int A[N] = {1, 2, 3, 4, 5, 2, 1, 8, 9, 2};
@@ -57,9 +60,15 @@ int main() {
   }
   std::cout << std::endl;
 
-  clock_t end = clock();
+  auto end = std::chrono::steady_clock::now(); // begin - end   chrono
+  
+  auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+  std::cout << "chrono =  " << elapsed_ms.count() << " ms\n";
+  
 
-  std::cout << "time = " << (double)(end - start) / CLOCKS_PER_SEC << " sec" << std::endl;
+  clock_t finish = clock();  // start - finish    ctime
+
+  std::cout << "ctime = " << (double)(finish - start) / CLOCKS_PER_SEC << " sec" << std::endl;
   //std::cout << "CLOCKS_PER_SEC = " << CLOCKS_PER_SEC << std::endl; 
 
   return 0;
