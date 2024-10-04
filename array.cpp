@@ -43,6 +43,15 @@ int main() {
   }
   std::cout << std::endl;
 
+  int M;
+  std::cout << "input M   ";
+  std::cin >> M;
+  int massive[M];
+  for (int i = 0; i < M; i ++) {
+    massive[i] = i * i - i;
+    std::cout << "massive[" << i << "] = " << massive[i] << std::endl;
+  }
+
 
   return 0;
 }

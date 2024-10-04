@@ -9,6 +9,6 @@ int main() {
     }
   } else { printf("not get memory");
   }
-  //free(pd);
+  free(pd);
   return 0;
 }

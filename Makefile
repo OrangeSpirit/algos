@@ -58,7 +58,15 @@ sorted: clean
 	./a.out
 
 malloc: clean
-	$(CC) $(WWW) malloc.cpp
+	$(CC) $(WWW) malloc.c
+	./a.out
+
+struct: clean
+	$(GCC) $(WWW) struct.cpp
+	./a.out
+
+2array: clean
+	$(GCC) $(WWW) 2array.cpp
 	./a.out
 
 retry:
