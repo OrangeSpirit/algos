@@ -19,5 +19,14 @@ int main() {
     std::cout << std::endl;
   }
 
+
+// memory investigation
+
+  int *p = reinterpret_cast<int *>(A);
+  for (int i = 0; i < N * M; i++) {
+    std::cout << *(p + i) << "   ";
+  }
+
+
   return 0;
 }

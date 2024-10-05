@@ -69,6 +69,14 @@ struct: clean
 	$(GCC) $(WWW) 2array.cpp
 	./a.out
 
+3array: clean
+	$(GCC) $(WWW) 3array.cpp
+	./a.out
+
+7array: clean
+	$(GCC) $(WWW) 7array.cpp
+	./a.out
+
 retry:
 	for i in {1..5}; do $(CMD) && break\
 	|| sleep 3; done
