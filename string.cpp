@@ -14,4 +14,28 @@ int main() {
   for (int i = 1; i < 30; i++) {
     std::cout << " *(a++) = " << *(a++) << std::endl;
   }
+
+  char stroka[] = "long string for sample";
+  int l = sizeof(stroka);
+  std::cout << "int l = " << l << std::endl;
+
+  int i = 0;
+  while (stroka[i]) {
+    std::cout << (int)stroka[i] << ' ';
+    i++;
+  }
+  std::cout << std::endl;
+
+  i = 0;
+  while (stroka[i]) {
+    std::cout << stroka[i];
+    i++;
+  }
+  std::cout << std::endl;
+
+  for (int j = 0; j < 256; j++) {
+    std::cout << j << " = " << (char)j << std::endl;
+  }
+
+  return 0;
 }
