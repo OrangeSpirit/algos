@@ -77,6 +77,10 @@ struct: clean
 	$(GCC) $(WWW) 7array.cpp
 	./a.out
 
+shift: clean
+	$(GCC) $(WWW) shift.cpp
+	./a.out
+
 retry:
 	for i in {1..5}; do $(CMD) && break\
 	|| sleep 3; done
