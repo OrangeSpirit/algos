@@ -33,14 +33,14 @@ void print_array(int a[], unsigned size) {
 int main() {
   int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 17, 19, 21};
   uint length = sizeof(a)/sizeof(int);
-  int shift = 2;
+  int shift = -2;
 
   print_array(a, length);
   rotate_left(a, length, shift);
   print_array(a, length);
 
-  shift = 5;
-  
+  shift = -5;
+
   rotate_right(a, length, shift);
   print_array(a, length);
 

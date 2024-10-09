@@ -81,6 +81,10 @@ shift: clean
 	$(GCC) $(WWW) shift.cpp
 	./a.out
 
+strlen: clean
+	$(GCC) $(WWW) strlen.cpp
+	./a.out
+
 retry:
 	for i in {1..5}; do $(CMD) && break\
 	|| sleep 3; done
