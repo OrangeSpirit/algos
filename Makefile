@@ -85,6 +85,14 @@ strlen: clean
 	$(GCC) $(WWW) strlen.cpp
 	./a.out
 
+strstr: clean
+	$(GCC) $(WWW) strstr.cpp
+	./a.out
+
+reference: clean
+	$(GCC) $(WWW) reference.cpp
+	./a.out
+
 retry:
 	for i in {1..5}; do $(CMD) && break\
 	|| sleep 3; done
