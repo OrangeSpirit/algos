@@ -9,6 +9,7 @@ void strcat(char *to, const char *from) {
       to++;
       from++;
     };
+    *to = '\0';
 }
 
 void print_text(char *to) {

@@ -97,6 +97,10 @@ reference: clean
 	$(GCC) $(WWW) reference.cpp
 	./a.out
 
+fstream: clean
+	$(GCC) $(WWW) fstream.cpp
+	./a.out
+
 retry:
 	for i in {1..5}; do $(CMD) && break\
 	|| sleep 3; done
