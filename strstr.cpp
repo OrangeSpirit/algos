@@ -4,7 +4,19 @@ void test();
 
 void strcat(char *to, const char *from) {
     while (*to) to++;
-    while (*to++ == *from++);
+    while (*from) {
+      *to = *from;
+      to++;
+      from++;
+    };
+}
+
+void print_text(char *to) {
+  while (*to) {
+    std::cout << *to << ' ';
+    to++;
+  }
+  std::cout << std::endl;
 }
 
 //compact
@@ -48,10 +60,21 @@ int main() {
     std::cout << "pattertn = " << pattern << std::endl;
     
     int result = strstr(text, pattern);
-    
     std::cout << "result = " << result << std::endl;
     
-    test();
+    char text1[20] = "bebebe";
+    char text2[] = "pupupu";
+
+    print_text(text1);
+    print_text(text2);
+
+    strcat(text1, text2);
+
+    print_text(text1);
+    print_text(text2);
+  
+
+    //test();
 
     return 0;
 }

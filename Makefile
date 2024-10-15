@@ -89,6 +89,10 @@ strstr: clean
 	$(GCC) $(WWW) strstr.cpp
 	./a.out
 
+strstr_shot: clean
+	$(GCC) $(WWW) strstr_shot.cpp
+	./a.out
+
 reference: clean
 	$(GCC) $(WWW) reference.cpp
 	./a.out
