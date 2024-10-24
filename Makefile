@@ -1,5 +1,6 @@
 CC= gcc
 GCC= g++ -std=c++17
+DUMP= g++ -fdump-class-hierarchy
 WWW= -Wall -Werror -Wextra
 CMD= echo "pip to pip"
 
@@ -99,6 +100,14 @@ reference: clean
 
 fstream: clean
 	$(GCC) $(WWW) fstream.cpp
+	./a.out
+
+person: clean
+	$(GCC) $(WWW) person.cpp
+	./a.out
+
+dump_person: clean
+	$(DUMP) person.cpp
 	./a.out
 
 retry:
